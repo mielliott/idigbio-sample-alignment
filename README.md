@@ -3,25 +3,13 @@
 # a url without scheme like https:// (e.g., ```url: foodorganisms.txt```) 
 # is assumed to be a local file in working directory
 datasets:
-    - url: names.csv
+    - url: animalia.csv
       enabled: true
-      type: text/csv
-    - url: https://docs.google.com/spreadsheets/u/0/d/1d-4X2xFdf-PkhXRsRu63Wx00kJiZsrNyCM9QqG2rvPA/export?format=tsv
-      enabled: false
       type: text/tab-separated-values
-    - id: mdd
-      enabled: false
-      name: Mammal Diversity Database
-      type: application/nomer
-    - url: https://example.org/data.tsv
-      enabled: false
+    - url: plantae.csv
+      enabled: true
       type: text/tab-separated-values
-    - url: https://serv.biokic.asu.edu/ecdysis/content/dwca/UCSB-IZC_DwC-A.zip
-      enabled: false
-      type: application/dwca
-    - url: https://scan-bugs.org:443/portal/webservices/dwc/rss.xml 
-      enabled: false
-      type: application/rss+xml
+
 # 
 taxonomies:
 #
@@ -43,37 +31,37 @@ taxonomies:
       enabled: true
       name: Discover Life Taxonomy
     - id: batnames
-      enabled: false
+      enabled: true
       name: Bat Names 
     - id: col
-      enabled: false
+      enabled: true
       name: Catalogue of Life
     - id: gbif
-      enabled: false
+      enabled: true
       name: GBIF Backbone Taxonomy
     - id: globi
-      enabled: false
+      enabled: true
       name: GloBI Taxon Graph
     - id: indexfungorum
       enabled: false
       name: Index Fungorum
     - id: mdd
-      enabled: false
+      enabled: true
       name: Mammal Diversity Database
     - id: ott
-      enabled: false
+      enabled: true
       name: Open Tree of Life Taxonomy
     - id: pbdb
-      enabled: false
+      enabled: true
       name: Paleobiology Database
     - id: plazi
-      enabled: false
+      enabled: true
       name: Plazi Treatments
     - id: tpt
-      enabled: false
+      enabled: true
       name: Terrestrial Parasite Tracker Taxonomies
     - id: wfo
-      enabled: false
+      enabled: true
       name: World of Flora Online
 ---
 
