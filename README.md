@@ -10,6 +10,9 @@ datasets:
       enabled: false
       type: text/tab-separated-values
     - url: names.tsv
+      enabled: false
+      type: text/tab-separated-values
+    - url: corrected-names.tsv
       enabled: true
       type: text/tab-separated-values
 # 

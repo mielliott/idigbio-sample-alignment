@@ -18,4 +18,7 @@ cat ~/biodiversity-llms/biodiversity-confidence/results/input/taxonomy-qa.tsv\
 	| mlr --tsvlite rename 'taxon,scientificName'\
         > plantae.tsv
 
-cat animalia.tsv plantae.tsv > names.tsv
+mlr --tsvlite cat animalia.tsv plantae.tsv > names.tsv
+
+head -n1 names.tsv > corrected-names.tsv
+tail -n+2 names.tsv | sed -e 's/^/\t/' | nomer append globi-correct | cut -f5 >> corrected-names.tsv
