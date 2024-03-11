@@ -4,6 +4,7 @@ cat ~/biodiversity-llms/biodiversity-confidence/results/input/taxonomy-qa.tsv\
        	| mlr --tsvlite sort -f 'taxon'\
 	| mlr --tsvlite uniq -f 'taxon'\
 	| grep '\S'\
+	| mlr --tsvlite put '$taxon = capitalize($taxon)'\
 	| mlr --tsvlite rename 'taxon,scientificName'\
 	> animalia.tsv
 
@@ -13,6 +14,7 @@ cat ~/biodiversity-llms/biodiversity-confidence/results/input/taxonomy-qa.tsv\
         | mlr --tsvlite sort -f 'taxon'\
         | mlr --tsvlite uniq -f 'taxon'\
         | grep '\S'\
+	| mlr --tsvlite put '$taxon = capitalize($taxon)'\
 	| mlr --tsvlite rename 'taxon,scientificName'\
         > plantae.tsv
 
