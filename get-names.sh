@@ -18,3 +18,4 @@ cat ~/biodiversity-llms/biodiversity-confidence/results/input/taxonomy-qa.tsv\
 	| mlr --tsvlite rename 'taxon,scientificName'\
         > plantae.tsv
 
+cat animalia.tsv plantae.tsv > names.tsv
