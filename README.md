@@ -4,9 +4,12 @@
 # is assumed to be a local file in working directory
 datasets:
     - url: animalia.tsv
-      enabled: true
+      enabled: false
       type: text/tab-separated-values
     - url: plantae.tsv
+      enabled: false
+      type: text/tab-separated-values
+    - url: names.tsv
       enabled: true
       type: text/tab-separated-values
 # 
